@@ -41,11 +41,9 @@ export default function CalculatePage() {
             <label className="text-sm font-medium text-gray-700">
               投資の種類
             </label>
-            <select className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 bg-white">
-              <option>家電</option>
-              <option>サブスク</option>
-              <option>生活改善</option>
-            </select>
+            <p className="text-sm text-gray-900 px-4 py-3 border border-gray-200 rounded-lg bg-gray-50">
+              家電
+            </p>
           </div>
 
           <div className="flex flex-col gap-2">
