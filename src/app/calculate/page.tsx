@@ -1,19 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { getHourlyWage, setHourlyWage } from '@/lib/storage'
 
 export default function CalculatePage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
 
-  const [price, setPrice] = useState('')
-  const [timeSaved, setTimeSaved] = useState('')
-  const [wage, setWage] = useState(() => {
-    if (typeof window === 'undefined') return '1500'
-    return String(getHourlyWage())
-  })
+  const [price, setPrice] = useState(searchParams.get('price') ?? '')
+  const [timeSaved, setTimeSaved] = useState(searchParams.get('time') ?? '')
+  const [wage, setWage] = useState(() => String(getHourlyWage()))
 
   const handleSubmit = () => {
     const p = Number(price)
