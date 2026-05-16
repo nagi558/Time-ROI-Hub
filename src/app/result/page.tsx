@@ -99,23 +99,23 @@ export default async function ResultPage({ searchParams }: Props) {
           <div className="flex flex-col gap-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-500">購入価格</span>
-              <span className="font-medium">{formatYen(input.price)}</span>
+              <span className="font-medium text-gray-900">{formatYen(input.price)}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">1日あたりの便益（時給換算）</span>
-              <span className="font-medium">
+              <span className="font-medium text-gray-900">
                 {formatYen(result.dailyBenefit)}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">月あたりの便益</span>
-              <span className="font-medium">
+              <span className="font-medium text-gray-900">
                 {formatYen(result.monthlyBenefit)}
               </span>
             </div>
             <div className="flex justify-between border-t border-gray-100 pt-2">
               <span className="text-gray-500">回収期間</span>
-              <span className="font-semibold">
+              <span className="font-semibold text-gray-900">
                 {formatMonths(result.paybackMonths)}
               </span>
             </div>

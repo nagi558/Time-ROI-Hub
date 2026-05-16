@@ -55,17 +55,17 @@ export default async function PresetDetailPage({ params }: Props) {
           <div className="flex flex-col gap-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-500">購入価格</span>
-              <span className="font-medium">
+              <span className="font-medium text-gray-900">
                 {formatYen(preset.defaultPrice)}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">時短時間</span>
-              <span className="font-medium">{preset.timeSavedPerDay}分/日</span>
+              <span className="font-medium text-gray-900">{preset.timeSavedPerDay}分/日</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">時給</span>
-              <span className="font-medium">¥1,500/時</span>
+              <span className="font-medium text-gray-900">¥1,500/時</span>
             </div>
           </div>
         </div>
