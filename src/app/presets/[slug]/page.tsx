@@ -39,6 +39,7 @@ export default async function PresetDetailPage({ params }: Props) {
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
       <div className="w-full max-w-sm flex flex-col gap-8">
         <div className="flex flex-col gap-1">
+          <p className="text-sm text-gray-500">Time ROI Hub</p>
           <h1 className="text-2xl font-bold text-gray-900">{preset.name}</h1>
         </div>
 
@@ -69,7 +70,7 @@ export default async function PresetDetailPage({ params }: Props) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
           <Link
             href={`/calculate?price=${preset.defaultPrice}&time=${preset.timeSavedPerDay}`}
             className="w-full py-4 bg-green-800 text-white text-center text-sm font-semibold rounded-xl hover:bg-green-900 transition-colors"
@@ -81,6 +82,12 @@ export default async function PresetDetailPage({ params }: Props) {
             className="w-full py-4 text-center text-sm text-green-800 font-medium"
           >
             ← プリセット一覧に戻る
+          </Link>
+          <Link
+            href="/"
+            className="w-full text-center text-sm text-gray-500 font-medium"
+          >
+            ← ホームへ戻る
           </Link>
         </div>
       </div>
