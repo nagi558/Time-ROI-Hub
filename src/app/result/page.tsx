@@ -68,6 +68,7 @@ export default async function ResultPage({ searchParams }: Props) {
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
       <div className="w-full max-w-sm flex flex-col gap-8">
         <div className="flex flex-col gap-1">
+          <p className="text-sm text-gray-500">Time ROI Hub</p>
           <h1 className="text-2xl font-bold text-gray-900">計算結果</h1>
         </div>
 
@@ -127,6 +128,12 @@ export default async function ResultPage({ searchParams }: Props) {
             className="w-full py-4 bg-green-800 text-white text-center text-sm font-semibold rounded-xl hover:bg-green-900 transition-colors"
           >
             別の条件で計算する
+          </Link>
+          <Link
+            href="/"
+            className="w-full text-center text-sm text-gray-500 font-medium"
+          >
+            ← ホームへ戻る
           </Link>
         </div>
       </div>
