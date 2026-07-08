@@ -21,35 +21,10 @@ const toNumber = (value?: string, fallback = 0): number => {
   return Number.isFinite(num) ? num : fallback
 }
 
-const verdictConfig = {
-  buy: {
-    label: '買い！',
-    emoji: '😊',
+const resultMessage = {
     color: 'text-green-700',
     bg: 'bg-green-50',
-    message: 'あなたの時間価値に基づくと、十分に元が取れる投資です。',
-  },
-  good: {
-    label: 'アリ',
-    emoji: '🙂',
-    color: 'text-blue-700',
-    bg: 'bg-blue-50',
-    message: '悪くない投資です。用途に合えば購入を検討しましょう。',
-  },
-  maybe: {
-    label: '微妙',
-    emoji: '😐',
-    color: 'text-yellow-700',
-    bg: 'bg-yellow-50',
-    message: '回収まで時間がかかります。本当に必要か考えましょう。',
-  },
-  pass: {
-    label: 'やめとけ',
-    emoji: '😞',
-    color: 'text-red-700',
-    bg: 'bg-red-50',
-    message: '時間価値的にはコスパが悪い投資です。',
-  },
+    message: 'ライフスタイルや使用頻度も踏まえてご判断ください。',
 }
 
 export default async function ResultPage({ searchParams }: Props) {
@@ -62,7 +37,6 @@ export default async function ResultPage({ searchParams }: Props) {
   }
 
   const result = calcROI(input)
-  const config = verdictConfig[result.verdict]
 
   return (
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
@@ -73,25 +47,18 @@ export default async function ResultPage({ searchParams }: Props) {
         </div>
 
         <div
-          className={`flex flex-col items-center gap-4 rounded-2xl p-6 ${config.bg}`}
+          className={`flex flex-col items-center gap-4 rounded-2xl p-6 ${resultMessage.bg}`}
         >
           <p className="text-sm font-medium text-gray-600">回収期間</p>
-          <p className={`text-5xl font-bold ${config.color}`}>
+          <p className={`text-5xl font-bold ${resultMessage.color}`}>
             {formatMonths(result.paybackMonths)}
           </p>
           <p className="text-sm text-gray-600">実質のコスト削減額（1年）</p>
-          <p className={`text-2xl font-bold ${config.color}`}>
+          <p className={`text-2xl font-bold ${resultMessage.color}`}>
             {formatYen(result.annualBenefit)}
           </p>
-          <div
-            className={`flex items-center gap-2 px-4 py-2 rounded-full bg-white`}
-          >
-            <span>{config.emoji}</span>
-            <span className={`text-sm font-semibold ${config.color}`}>
-              判定：{config.label}
-            </span>
-          </div>
-          <p className="text-xs text-gray-500 text-center">{config.message}</p>
+
+          <p className="text-xs text-gray-500 text-center">{resultMessage.message}</p>
         </div>
 
         <div className="flex flex-col gap-3">

@@ -15,8 +15,6 @@ export type ROIResult = {
   monthlyBenefit: number
   annualBenefit: number
   paybackMonths: number
-  verdictScore: number
-  verdict: 'buy' | 'good' | 'maybe' | 'pass'
 }
 
 export type Preset = {
