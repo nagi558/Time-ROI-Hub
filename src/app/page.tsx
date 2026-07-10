@@ -43,9 +43,18 @@ export default function Homepage() {
           </Link>
           <Link
             href="/presets"
-            className="w-full py-4 border border-gray-200 text-gray-700 text-center text-sm font-medium rounded-xl hover:bg-gray-50 transition-colors"
+            className="w-full py-4 bg-white border-2 border-green-800 text-green-800 text-center text-sm font-semibold rounded-xl hover:bg-green-50 transition-colors"
           >
             人気の計算例を見る
+          </Link>
+        </div>
+
+        <div className="text-center">
+          <Link
+            href="/articles"
+            className="text-sm text-green-700 underline underline-offset-4 decoration-green-700/40 hover:text-green-900 hover:decoration-green-900/60 transition-colors"
+          >
+            📚 お役立ち記事を読む →
           </Link>
         </div>
 

@@ -24,3 +24,11 @@ export type Preset = {
   timeSavedPerDay: number
   defaultPrice: number
 }
+
+export type Article = {
+  slug: string
+  title: string
+  description: string
+  date: string
+  contentHtml: string
+}
