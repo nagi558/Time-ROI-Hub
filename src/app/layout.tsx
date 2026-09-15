@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   openGraph: {
     images: ['/time-roi-hub-ogp.png'],
   },
+  verification: {
+    google: 'ISBK00_99d_uzoBExzV4XpDXkEUMgvCvAgaikqoggjw',
+  },
 }
 
 export default function RootLayout({
