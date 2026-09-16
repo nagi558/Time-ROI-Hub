@@ -80,6 +80,15 @@ export default function Homepage() {
             </span>
           </div>
         </div>
+
+        <div className="text-center">
+          <Link
+            href="/privacy"
+            className="text-xs text-gray-400 underline underline-offset-2 hover:text-gray-600 transition-colors"
+          >
+            プライバシーポリシー
+          </Link>
+        </div>
       </div>
     </main>
   )
