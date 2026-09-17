@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!preset) return {}
   return {
     title: `${preset.name}は元が取れる？`,
-    description: `${preset.name}の投資回収期間を時間単位で計算。あなたの時給で「買い」かどうか判定します。`,
+    description: `${preset.name}の投資回収期間を時間単位で計算。あなたの時給で何ヶ月で元が取れるかシミュレーションします。`,
   }
 }
 

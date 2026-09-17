@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Time ROI Hub｜買い物を時間投資で判断する',
   description:
-    '家電・サブスクが「時間的に得か」を3項目入力で即判定。投資回収期間をあなたの時給で自動計算。',
+    '家電・サブスクが「時間的に得か」を3項目入力ですぐわかる。投資回収期間をあなたの時給で自動計算します。',
 }
 
 export default function Homepage() {

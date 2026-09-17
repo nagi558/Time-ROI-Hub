@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s｜Time ROI Hub',
   },
   description:
-    '家電・サブスクが「時間的に得か」を3項目入力で即判定。投資回収期間をあなたの時給で自動計算。',
+    '家電・サブスクが「時間的に得か」を3項目入力ですぐわかる。投資回収期間をあなたの時給で自動計算します。',
   openGraph: {
     images: ['/time-roi-hub-ogp.png'],
   },
