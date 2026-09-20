@@ -72,7 +72,7 @@ export default async function PresetDetailPage({ params }: Props) {
 
         <div className="flex flex-col gap-1">
           <Link
-            href={`/calculate?price=${preset.defaultPrice}&time=${preset.timeSavedPerDay}`}
+            href={`/calculate?price=${preset.defaultPrice}&time=${preset.timeSavedPerDay}&name=${encodeURIComponent(preset.name)}`}
             className="w-full py-4 bg-green-800 text-white text-center text-sm font-semibold rounded-xl hover:bg-green-900 transition-colors"
           >
             自分の時給で計算する
