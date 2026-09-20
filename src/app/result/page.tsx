@@ -2,11 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { calcROI } from '@/lib/roi'
 import { formatYen, formatMonths } from '@/lib/format'
+import { SITE_URL } from '@/lib/site'
 import type { ROIInput } from '@/types'
-
-export const metadata: Metadata = {
-  title: '計算結果',
-}
 
 type Props = {
   searchParams: Promise<{
@@ -14,12 +11,38 @@ type Props = {
     time?: string
     wage?: string
     category?: string
+    name?: string
   }>
 }
 
 const toNumber = (value?: string, fallback = 0): number => {
   const num = Number(value)
   return Number.isFinite(num) ? num : fallback
+}
+
+const buildQuery = (params: Awaited<Props['searchParams']>): string => {
+  const query = new URLSearchParams()
+  if (params.price) query.set('price', params.price)
+  if (params.time) query.set('time', params.time)
+  if (params.wage) query.set('wage', params.wage)
+  if (params.category) query.set('category', params.category)
+  if (params.name) query.set('name', params.name)
+  return query.toString()
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const params = await searchParams
+  const queryString = buildQuery(params)
+  const ogImageUrl = `${SITE_URL}/result/opengraph-image${
+    queryString ? `?${queryString}` : ''
+  }`
+
+  return {
+    title: '計算結果',
+    openGraph: {
+      images: [ogImageUrl],
+    },
+  }
 }
 
 const resultMessage = {
@@ -40,6 +63,19 @@ export default async function ResultPage({ searchParams }: Props) {
 
   const result = calcROI(input)
   const priceLabel = isSubscription ? '年間費用' : '購入価格'
+  const itemName = params.name?.trim() || (isSubscription ? 'サブスク' : '家電')
+
+  const shareUrl = `${SITE_URL}/result?${buildQuery(params)}`
+
+  const shareText = `${itemName}（${priceLabel}${formatYen(
+    input.price,
+  )}）を時給${formatYen(input.hourlyWage)}換算で計算したら、回収まで${formatMonths(
+    result.paybackMonths,
+  )}でした。`
+
+  const tweetIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    shareText,
+  )}&url=${encodeURIComponent(shareUrl)}&hashtags=TimeROIHub`
 
   return (
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
@@ -93,6 +129,14 @@ export default async function ResultPage({ searchParams }: Props) {
         </div>
 
         <div className="flex flex-col gap-3">
+          <a
+            href={tweetIntentUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-4 bg-black text-white text-center text-sm font-semibold rounded-xl hover:bg-gray-800 transition-colors"
+          >
+            Xでシェアする
+          </a>
           <Link
             href="/calculate"
             className="w-full py-4 bg-green-800 text-white text-center text-sm font-semibold rounded-xl hover:bg-green-900 transition-colors"

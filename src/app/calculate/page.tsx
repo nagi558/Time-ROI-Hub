@@ -21,6 +21,7 @@ function CalculateForm() {
   const [price, setPrice] = useState(searchParams.get('price') ?? '')
   const [timeSaved, setTimeSaved] = useState(searchParams.get('time') ?? '')
   const [wage, setWage] = useState(() => String(getHourlyWage()))
+  const [name, setName] = useState(searchParams.get('name') ?? '')
 
   const handleSubmit = () => {
     const p = Number(price)
@@ -33,8 +34,11 @@ function CalculateForm() {
       category === 'subscription' && billingCycle === 'monthly' ? p * 12 : p
 
     setHourlyWage(w)
+    const nameParam = name.trim()
+      ? `&name=${encodeURIComponent(name.trim())}`
+      : ''
     router.push(
-      `/result?price=${annualPrice}&time=${t}&wage=${w}&category=${category}`,
+      `/result?price=${annualPrice}&time=${t}&wage=${w}&category=${category}${nameParam}`,
     )
   }
 
@@ -74,6 +78,8 @@ function CalculateForm() {
         </label>
         <input
           type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder={
             category === 'subscription' ? '例）ChatGPT Plus' : '例）食洗機'
           }
