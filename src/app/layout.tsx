@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     '家電・サブスクが「時間的に得か」を3項目入力ですぐわかる。投資回収期間をあなたの時給で自動計算します。',
   openGraph: {
-    images: ['/time-roi-hub-ogp.png'],
+    images: ['/mototorikeisan-ogp.png'],
   },
   verification: {
     google: 'ISBK00_99d_uzoBExzV4XpDXkEUMgvCvAgaikqoggjw',
