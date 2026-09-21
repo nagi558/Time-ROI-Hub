@@ -75,13 +75,13 @@ export default async function ResultPage({ searchParams }: Props) {
 
   const tweetIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     shareText,
-  )}&url=${encodeURIComponent(shareUrl)}&hashtags=TimeROIHub`
+  )}&url=${encodeURIComponent(shareUrl)}&hashtags=${encodeURIComponent('元取り計算')}`
 
   return (
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
       <div className="w-full max-w-sm flex flex-col gap-8">
         <div className="flex flex-col gap-1">
-          <p className="text-sm text-gray-500">Time ROI Hub</p>
+          <p className="text-sm text-gray-500">元取り計算</p>
           <h1 className="text-2xl font-bold text-gray-900">計算結果</h1>
         </div>
 

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Time ROI Hub｜買い物を時間投資で判断する',
+  title: '元取り計算｜買い物を時間投資で判断する',
   description:
     '家電・サブスクが「時間的に得か」を3項目入力ですぐわかる。投資回収期間をあなたの時給で自動計算します。',
 }
@@ -13,7 +13,7 @@ export default function Homepage() {
       <div className="w-full max-w-sm flex flex-col gap-8">
         <div className="text-center">
           <p className="text-sm font-medium text-gray-500 tracking-widest">
-            Time ROI Hub
+            元取り計算
           </p>
         </div>
 

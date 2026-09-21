@@ -12,8 +12,8 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Time ROI Hub｜買い物を時間投資で判断する',
-    template: '%s｜Time ROI Hub',
+    default: '元取り計算｜買い物を時間投資で判断する',
+    template: '%s｜元取り計算',
   },
   description:
     '家電・サブスクが「時間的に得か」を3項目入力ですぐわかる。投資回収期間をあなたの時給で自動計算します。',
