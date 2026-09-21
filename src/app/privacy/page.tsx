@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',
-  description: 'Time ROI Hubのプライバシーポリシー。個人情報の取り扱い、広告配信について説明します。',
+  description: '元取り計算のプライバシーポリシー。個人情報の取り扱い、広告配信について説明します。',
 }
 
 export default function PrivacyPage() {
@@ -11,13 +11,13 @@ export default function PrivacyPage() {
     <main className="flex flex-col items-center min-h-screen px-6 py-10 bg-white">
       <div className="w-full max-w-sm flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <p className="text-sm text-gray-500">Time ROI Hub</p>
+          <p className="text-sm text-gray-500">元取り計算</p>
           <h1 className="text-2xl font-bold text-gray-900">プライバシーポリシー</h1>
         </div>
 
         <div className="flex flex-col gap-5 text-sm text-gray-700 leading-relaxed">
           <p>
-            Time ROI Hub(以下「本サイト」)は、個人が運営するWebサービスです。
+            元取り計算(以下「本サイト」)は、個人が運営するWebサービスです。
             本ページでは、本サイトにおける個人情報・アクセス情報の取り扱いについて説明します。
           </p>
 

@@ -89,7 +89,7 @@ export async function GET(request: NextRequest) {
             margin: 0,
           }}
         >
-          Time ROI Hub
+          元取り計算
         </p>
       </div>
     ),
