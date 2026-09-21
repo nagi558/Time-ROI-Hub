@@ -65,7 +65,8 @@ export default function PrivacyPage() {
           <section className="flex flex-col gap-1">
             <h2 className="font-semibold text-gray-900">4. アクセス解析ツールについて</h2>
             <p>
-              本サイトは、サービス改善のためにアクセス解析ツール(Google Search Console等)を
+              本サイトは、サービス改善のためにアクセス解析ツール(Google Analytics、
+              Google Search Console等)を
               利用することがあります。これらのツールはCookie等を使用してトラフィックデータを
               収集しますが、個人を特定する情報は含まれません。
             </p>
