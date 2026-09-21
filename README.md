@@ -110,6 +110,16 @@ docker-compose up
 
 ブラウザで以下へアクセス：http://localhost:3000
 
+### 環境変数
+
+Google Analytics 4 を有効にする場合は `.env.local` に以下を設定する（未設定の場合はGAタグは出力されない）。
+
+```
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+本番環境（Vercel）ではプロジェクトの環境変数設定に同じキーを追加する必要がある。
+
 ### ビルド
 
 ```bash
