@@ -31,4 +31,8 @@ export type Article = {
   description: string
   date: string
   contentHtml: string
+  /** 関連記事のslug（テーマの近い2〜3本） */
+  related: string[]
+  /** 関連プリセットのslug */
+  presets: string[]
 }

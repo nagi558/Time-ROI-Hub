@@ -2,6 +2,7 @@
 title: "電気ケトルは本当に元が取れる？時間ROIで徹底検証"
 description: "電気ケトルはやかんよりお湯を早く沸かせると言われますが、数千円の価格に見合う時間削減効果はあるのか、時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["pressure-cooker-roi", "auto-cooker-roi", "dish-dryer-roi"]
 ---
 
 # 電気ケトルは本当に元が取れる？時間ROIで徹底検証

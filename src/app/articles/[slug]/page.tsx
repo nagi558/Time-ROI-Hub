@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { notFound } from 'next/navigation'
+import RelatedArticles from '@/components/RelatedArticles'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -43,6 +44,8 @@ export default async function ArticleDetailPage({ params }: Props) {
           className="flex flex-col gap-4 text-sm text-gray-700 leading-relaxed [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-2 [&_p]:leading-relaxed"
           dangerouslySetInnerHTML={{ __html: article.contentHtml }}
         />
+
+        <RelatedArticles article={article} />
 
         <div className="flex flex-col gap-1">
           <Link

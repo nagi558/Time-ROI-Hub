@@ -2,6 +2,8 @@
 title: "食器乾燥機は本当に元が取れる？時間ROIで徹底検証"
 description: "食器乾燥機は拭き上げ・片付けの手間を減らせると言われますが、1〜3万円程度の価格に見合う時間削減効果はあるのか、時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["dishwasher-roi", "electric-kettle-roi", "auto-cooker-roi"]
+presets: ["dishwasher"]
 ---
 
 # 食器乾燥機は本当に元が取れる？時間ROIで徹底検証

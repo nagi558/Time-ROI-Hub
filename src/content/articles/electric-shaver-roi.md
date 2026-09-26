@@ -2,6 +2,7 @@
 title: "電動シェーバーは本当に元が取れる？時間ROIで徹底検証"
 description: "電動シェーバーは毎日の髭剃り時間を短縮できると言われますが、1〜3万円程度の価格に見合う時間削減効果はあるのか、時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["electric-kettle-roi", "futon-dryer-roi", "delivery-box-roi"]
 ---
 
 # 電動シェーバーは本当に元が取れる？時間ROIで徹底検証

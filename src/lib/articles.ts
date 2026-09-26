@@ -11,6 +11,8 @@ type ArticleFrontmatter = {
   title: string
   description: string
   date: string
+  related?: string[]
+  presets?: string[]
 }
 
 export function getAllArticles(): Article[] {
@@ -30,6 +32,8 @@ export function getAllArticles(): Article[] {
       title: frontmatter.title,
       description: frontmatter.description,
       date: frontmatter.date,
+      related: frontmatter.related ?? [],
+      presets: frontmatter.presets ?? [],
       contentHtml: md.render(content),
     }
   })
