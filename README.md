@@ -144,4 +144,4 @@ npm run build
 | | |
 |---|---|
 | **GitHub** | https://github.com/nagi558/Time-ROI-Hub |
-| **URL** | https://mototorikeisan.com/ |
+| **URL** | https://www.mototorikeisan.com/ |

@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
             value: 'time-roi-hub.vercel.app',
           },
         ],
-        destination: 'https://mototorikeisan.com/:path*',
+        destination: 'https://www.mototorikeisan.com/:path*',
         permanent: true,
       },
     ]
