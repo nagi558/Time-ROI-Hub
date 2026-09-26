@@ -39,6 +39,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   return {
     title: '計算結果',
+    robots: { index: false, follow: true },
     openGraph: {
       images: [ogImageUrl],
     },
