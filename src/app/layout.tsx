@@ -11,6 +11,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  alternates: { canonical: './' },
   title: {
     default: '元取り計算｜買い物を時間投資で判断する',
     template: '%s｜元取り計算',

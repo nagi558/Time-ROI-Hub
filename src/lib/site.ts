@@ -1,1 +1,1 @@
-export const SITE_URL = 'https://mototorikeisan.com'
+export const SITE_URL = 'https://www.mototorikeisan.com'
