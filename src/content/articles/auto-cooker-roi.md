@@ -2,6 +2,7 @@
 title: "自動調理鍋は本当に元が取れる？時間ROIで徹底検証"
 description: "材料を入れるだけで調理が完了する自動調理鍋。数万円する価格に見合うだけの時間削減効果はあるのか、時間ROIの視点から計算します。"
 date: "2026-09-18"
+related: ["pressure-cooker-roi", "dishwasher-roi", "electric-kettle-roi"]
 ---
 
 # 自動調理鍋は本当に元が取れる？時間ROIで徹底検証

@@ -2,6 +2,7 @@
 title: "布団乾燥機は本当に元が取れる？時間ROIで徹底検証"
 description: "布団乾燥機は天日干しの手間や時間を省けると言われますが、1〜2万円程度の価格に見合う時間削減効果はあるのか、時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["drum-dryer-roi", "robot-vacuum-roi", "delivery-box-roi"]
 ---
 
 # 布団乾燥機は本当に元が取れる？時間ROIで徹底検証

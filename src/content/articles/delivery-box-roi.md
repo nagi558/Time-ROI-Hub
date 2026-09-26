@@ -2,6 +2,7 @@
 title: "宅配ボックスは本当に元が取れる？時間ROIで徹底検証"
 description: "宅配ボックスは再配達対応や荷物の受け取り待ちの手間を減らせると言われますが、価格に見合う時間削減効果はあるのか、時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["robot-vacuum-roi", "drum-dryer-roi", "futon-dryer-roi"]
 ---
 
 # 宅配ボックスは本当に元が取れる？時間ROIで徹底検証

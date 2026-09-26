@@ -2,6 +2,7 @@
 title: "電気圧力鍋は本当に元が取れる？時間ROIで徹底検証"
 description: "電気圧力鍋は煮込み料理の時間を大幅に短縮できると言われますが、価格に見合うだけの時間削減効果はあるのでしょうか。時間ROIの視点から検証します。"
 date: "2026-09-18"
+related: ["auto-cooker-roi", "dishwasher-roi", "electric-kettle-roi"]
 ---
 
 # 電気圧力鍋は本当に元が取れる？時間ROIで徹底検証
