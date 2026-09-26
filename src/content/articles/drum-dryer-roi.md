@@ -2,7 +2,7 @@
 title: "ドラム式洗濯乾燥機は元が取れる？何年で回収できるか計算"
 description: "ドラム式洗濯乾燥機は高額な買い物ですが、干す・取り込む手間をなくすことで何ヶ月で元が取れるのでしょうか。時間ROIの視点から費用対効果を計算します。"
 date: "2026-09-18"
-related: ["futon-dryer-roi", "robot-vacuum-roi", "dishwasher-roi"]
+related: ["futon-dryer-roi", "gas-dryer-roi", "robot-vacuum-roi", "dishwasher-roi"]
 presets: ["drum-washer", "dryer"]
 ---
 
