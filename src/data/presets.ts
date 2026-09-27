@@ -34,7 +34,7 @@ export const appliancePresets: Preset[] = [
     name: '電動アシスト自転車',
     category: 'appliance',
     timeSavedPerDay: 15,
-    defaultPrice: 80000,
+    defaultPrice: 140000,
   },
 ]
 
