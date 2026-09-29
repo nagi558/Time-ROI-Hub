@@ -34,7 +34,8 @@ export function getAllArticles(): Article[] {
       date: frontmatter.date,
       related: frontmatter.related ?? [],
       presets: frontmatter.presets ?? [],
-      contentHtml: md.render(content),
+      // 本文先頭の「# タイトル」はページ側のh1と重複するので除く
+      contentHtml: md.render(content.replace(/^\s*# .*\n/, '')),
     }
   })
 
