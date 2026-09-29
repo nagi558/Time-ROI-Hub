@@ -41,7 +41,7 @@ export default async function ArticleDetailPage({ params }: Props) {
         </div>
 
         <div
-          className="flex flex-col gap-4 text-sm text-gray-700 leading-relaxed [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-2 [&_p]:leading-relaxed"
+          className="flex flex-col gap-4 text-sm text-gray-700 leading-relaxed [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-2 [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-gray-900 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 [&_li]:mt-1 [&_th]:px-1 [&_th]:py-1 [&_td]:px-1 [&_td]:py-1 [&_tr]:border-b [&_tr]:border-gray-100"
           dangerouslySetInnerHTML={{ __html: article.contentHtml }}
         />
 
