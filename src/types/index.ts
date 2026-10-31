@@ -13,7 +13,6 @@ export type ROIInput = {
 export type ROIResult = {
   dailyBenefit: number
   monthlyBenefit: number
-  annualBenefit: number
   paybackMonths: number
 }
 

@@ -68,11 +68,15 @@ export default async function ResultPage({ searchParams }: Props) {
 
   const shareUrl = `${SITE_URL}/result?${buildQuery(params)}`
 
+  const recovers = Number.isFinite(result.paybackMonths)
+
   const shareText = `${itemName}（${priceLabel}${formatYen(
     input.price,
   )}）を時給${formatYen(input.hourlyWage)}換算で計算したら、回収まで${formatMonths(
     result.paybackMonths,
-  )}でした。`
+  )}${
+    recovers ? `、その後は毎月${formatYen(result.monthlyBenefit)}分の時間が浮く計算` : ''
+  }でした。`
 
   const tweetIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     shareText,
@@ -89,14 +93,19 @@ export default async function ResultPage({ searchParams }: Props) {
         <div
           className={`flex flex-col items-center gap-4 rounded-2xl p-6 ${resultMessage.bg}`}
         >
-          <p className="text-sm font-medium text-gray-600">回収期間</p>
+          <p className="text-sm font-medium text-gray-600">元が取れるまで</p>
           <p className={`text-5xl font-bold ${resultMessage.color}`}>
             {formatMonths(result.paybackMonths)}
           </p>
-          <p className="text-sm text-gray-600">実質のコスト削減額（1年）</p>
-          <p className={`text-2xl font-bold ${resultMessage.color}`}>
-            {formatYen(result.annualBenefit)}
-          </p>
+          {recovers && (
+            <>
+              <p className="text-sm text-gray-600">その後は毎月</p>
+              <p className={`text-2xl font-bold ${resultMessage.color}`}>
+                {formatYen(result.monthlyBenefit)}分の時間が浮きます
+              </p>
+              <p className="text-xs text-gray-500">浮いた時間をあなたの時給で換算した価値です</p>
+            </>
+          )}
 
           <p className="text-xs text-gray-500 text-center">{resultMessage.message}</p>
         </div>
@@ -109,13 +118,13 @@ export default async function ResultPage({ searchParams }: Props) {
               <span className="font-medium text-gray-900">{formatYen(input.price)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">1日あたりの便益（時給換算）</span>
+              <span className="text-gray-500">1日あたりの浮いた時間の価値（時給換算）</span>
               <span className="font-medium text-gray-900">
                 {formatYen(result.dailyBenefit)}
               </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">月あたりの便益</span>
+              <span className="text-gray-500">月あたりの浮いた時間の価値（1日 × 30日）</span>
               <span className="font-medium text-gray-900">
                 {formatYen(result.monthlyBenefit)}
               </span>

@@ -55,7 +55,7 @@ export async function GET(request: NextRequest) {
               margin: 0,
             }}
           >
-            回収期間
+            元が取れるまで
           </p>
           <p
             style={{
@@ -76,7 +76,9 @@ export async function GET(request: NextRequest) {
               marginTop: 24,
             }}
           >
-            実質のコスト削減額（1年）　{formatYenForImage(result.annualBenefit)}
+            {Number.isFinite(result.paybackMonths)
+              ? `その後は毎月 ${formatYenForImage(result.monthlyBenefit)}分の時間が浮く`
+              : '浮く時間がないため、元は取れません'}
           </p>
         </div>
         <p
