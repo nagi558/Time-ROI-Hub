@@ -99,7 +99,6 @@ export default async function ResultPage({ searchParams }: Props) {
           </p>
           {recovers && (
             <>
-              <p className="text-sm text-gray-600">その後は</p>
               <p className={`text-2xl font-bold ${resultMessage.color}`}>
                 「{formatYen(result.monthlyBenefit)}/月」
               </p>
