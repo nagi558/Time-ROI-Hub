@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
             }}
           >
             {Number.isFinite(result.paybackMonths)
-              ? `その後は毎月 ${formatYenForImage(result.monthlyBenefit)}分の時間が浮く`
+              ? `その後は「${formatYenForImage(result.monthlyBenefit)}/月」分の時間の価値が浮く`
               : '浮く時間がないため、元は取れません'}
           </p>
         </div>

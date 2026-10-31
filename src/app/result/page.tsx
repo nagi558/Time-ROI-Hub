@@ -75,7 +75,7 @@ export default async function ResultPage({ searchParams }: Props) {
   )}）を時給${formatYen(input.hourlyWage)}換算で計算したら、回収まで${formatMonths(
     result.paybackMonths,
   )}${
-    recovers ? `、その後は毎月${formatYen(result.monthlyBenefit)}分の時間が浮く計算` : ''
+    recovers ? `、その後は「${formatYen(result.monthlyBenefit)}/月」分の時間の価値が浮く計算` : ''
   }でした。`
 
   const tweetIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -99,11 +99,12 @@ export default async function ResultPage({ searchParams }: Props) {
           </p>
           {recovers && (
             <>
-              <p className="text-sm text-gray-600">その後は毎月</p>
+              <p className="text-sm text-gray-600">その後は</p>
               <p className={`text-2xl font-bold ${resultMessage.color}`}>
-                {formatYen(result.monthlyBenefit)}分の時間が浮きます
+                「{formatYen(result.monthlyBenefit)}/月」
               </p>
-              <p className="text-xs text-gray-500">浮いた時間をあなたの時給で換算した価値です</p>
+              <p className="-mt-2 text-sm text-gray-700">分の時間の価値が浮きました</p>
+              <p className="text-xs text-gray-500">浮いた時間 × あなたの時給 で計算しています</p>
             </>
           )}
 
